@@ -1,0 +1,236 @@
+#mainNav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+  }
+  #mainNav .navbar-brand {
+    color: #fff;
+  }
+  #mainNav .navbar-nav {
+    margin-top: 1rem;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #fff;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: #1abc9c;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+    color: #fff;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #1abc9c;
+  }
+  #mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+  }
+.main-timeline-4 {
+    position: relative;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .main-timeline-4::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #bbb;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline-4 {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline-4::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11px;
+    background-color: #bbb;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left-4 {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right-4 {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left-4::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    right: 30px;
+    border: medium solid rgba(37, 117, 252, 1);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(37, 117, 252, 1);
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right-4::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid rgba(245, 87, 108, 1);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(245, 87, 108, 1) transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right-4::after {
+    left: -14px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .main-timeline-4::after {
+      left: 31px;
+    }
+  
+    /* Full-width containers */
+    .timeline-4 {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline-4::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left-4::after,
+    .right-4::after {
+      left: 18px;
+    }
+  
+    .left-4::before {
+      right: auto;
+    }
+  
+    /* Make all right containers behave like the left ones */
+    .right-4 {
+      left: 0%;
+    }
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+  a {
+   text-decoration: none;
+ }
+ 
+ .card-list {
+   padding: 0;
+   margin-top: 85px;
+   background-color: cornflowerblue;
+   color: white;
+   font-family: 'DM Mono', monospace;
+   display: flex;
+   padding: 3rem;
+   overflow-x: scroll;
+ }
+ 
+ .card-list::-webkit-scrollbar {
+   width: 10px;
+   height: 10px;
+ }
+ .card-list::-webkit-scrollbar-thumb {
+   background: #201c29;
+   border-radius: 10px;
+   box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+ }
+ 
+ .card-list::-webkit-scrollbar-track {
+   background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+ }
+ 
+ 
+ .card {
+   height: 400px;
+   width: 400px;
+   min-width: 250px;
+   padding: 1.5rem;
+   border-radius: 16px;
+   background: #17141d;
+   box-shadow: -1rem 0 1rem #000;
+   display: flex;
+   flex-direction: column;
+   transition: .2s;
+   margin: 0;
+   scroll-snap-align: start;
+   clear: both;
+   position: relative;
+ }
+ 
+ .card:focus-within~.card, .card:hover~.card {
+   transform: translateX(130px);
+ }
+ 
+ .card:hover {
+   transform: translateY(-1rem);
+ }
+ 
+ .card:not(:first-child) {
+   margin-left: -130px;
+ }
+ 
+ 
+ .card-header {
+   margin-bottom: auto;
+ }
+ 
+ .card-header p {
+   font-size: 14px;
+   margin: 0 0 1rem;
+   color: #7a7a8c;
+ }
+ 
+ .card-header h2 {
+   font-size: 20px;
+   margin: .25rem 0 auto;
+   text-decoration: none;
+   color: inherit;
+   border: 0;
+   display: inline-block;
+   cursor: pointer;
+ }
+ 
+ .card-header h2:hover {
+   background: linear-gradient(90deg,#ff8a00,#e52e71);
+   text-shadow: none;
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-clip: text;
+ }
+ 
+.list{
+  padding-top: 60px;
+  background-image: url(gradasi.jpeg);
+}

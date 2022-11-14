@@ -1,0 +1,254 @@
+#mainNav {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+}
+#mainNav .navbar-brand {
+  color: #fff;
+}
+#mainNav .navbar-nav {
+  margin-top: 1rem;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  color: #fff;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #1abc9c;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+  color: #fff;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+  color: #1abc9c;
+}
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.8rem;
+}
+
+.display-1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20pt;
+}
+
+.title{
+  text-align: center;
+  text-decoration: solid;
+}
+.divider-custom-line {
+  margin: top 15px;
+  width: 100%;
+  max-width: 20rem;
+  height: 0.25rem;
+  background-color:aliceblue;
+  border-radius: 1rem;
+  border-color: #2c3e50;
+}
+/* The actual timeline (the vertical ruler) */
+
+
+.card-text{
+  text-align: center;
+  font-weight: bold;
+}
+.card1{
+  background-color:lightskyblue;
+}
+
+.back{
+  background-image: url(back.jpg);
+  background-size:cover;
+}
+
+@media screen and (orientation: landscape) {
+  .bio{
+    text-align: left;
+    margin-top: 150px;
+    margin-left: 120px;
+    margin-right: 800px;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .but{
+    text-align: left;
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-right: 800px;
+    font-weight: bold;
+    font-size: large;
+  }
+}
+
+@media screen and (orientation:  portrait) {
+  .bio{
+    text-align: left;
+    margin-top: 150px;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .but{
+    text-align: left;
+    margin-top: 200px;
+    font-weight: bold;
+    font-size: large;
+  }
+}
+
+.background{
+  background-color: cornflowerblue;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+a {
+  text-decoration: none;
+}
+
+.card-list {
+  background-color: cornflowerblue;
+  color: white;
+  font-family: 'DM Mono', monospace;
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+}
+
+.card-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.card-list::-webkit-scrollbar-thumb {
+  background: #201c29;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+.card {
+  height: 400px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #17141d;
+  box-shadow: -1rem 0 1rem #000;
+  display: flex;
+  flex-direction: column;
+  transition: .2s;
+  margin: 0;
+  scroll-snap-align: start;
+  clear: both;
+  position: relative;
+}
+
+.card:focus-within~.card, .card:hover~.card {
+  transform: translateX(130px);
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+
+.card-header {
+  margin-bottom: auto;
+}
+
+.card-header p {
+  font-size: 14px;
+  margin: 0 0 1rem;
+  color: #7a7a8c;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  margin: .25rem 0 auto;
+  text-decoration: none;
+  color: inherit;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card-header h2:hover {
+  background: linear-gradient(90deg,#ff8a00,#e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.list{
+  padding-top: 60px;
+  background-image: url(gradasi.jpeg);
+}
+
+
+/* set table */
+.custom-table tbody th,
+.custom-table tbody td {
+  color: white;
+  font-weight: 400;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-weight: 300;
+  border: none;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.custom-table tbody th a,
+.custom-table tbody td a {
+  color: white;
+}
+
+.custom-table tbody th .more,
+.custom-table tbody td .more {
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.custom-table tbody tr {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.custom-table tbody tr:hover td,
+.custom-table tbody tr:focus td {
+  color: black;
+}
+
+.custom-table tbody tr:hover td a,
+.custom-table tbody tr:focus td a {
+  color: black;
+}
+
+.custom-table tbody tr:hover td .more,
+.custom-table tbody tr:focus td .more {
+  color: black;
+}
+
+.custom-table .td-box-wrap {
+  padding: 0;
+}
+
+.custom-table .box {
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.custom-table .box td,
+.custom-table .box th {
+  border: none !important;
+}
